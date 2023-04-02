@@ -1,0 +1,17 @@
+<%- include('../partials/header') %>
+<p class="title">Liste des étudiants de la promo <%= promo.name %></p>
+
+<div class="students-list">
+  <% for (const student of students) { %>
+    <div class="student">
+      <img class="student__image" src="<%= student.profile_picture_url %>">
+      <p class="student__name"><%= student.first_name %> <%= student.last_name %></p>
+      <p class="student__github"><%= student.github_username %></p>
+      <a class="student__link" href="/students/<%= student.id %>">voir la fiche étudiant</a>
+    </div>    
+  <%
+  }
+  %> 
+</div>
+
+<%- include('../partials/footer') %>

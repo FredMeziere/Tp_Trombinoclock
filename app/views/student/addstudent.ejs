@@ -1,0 +1,43 @@
+<%- include('../partials/header') %>
+<body>
+
+    <p class="title">Ajout d'un étudiant</p>
+
+    <form class="form" method="POST">
+
+      <div class="form__row">
+        <label class="form__label">Nom :</label>
+        <input class="form__field" name="last_name">
+      </div>
+
+      <div class="form__row">
+        <label class="form__label">Prénom :</label>
+        <input class="form__field">
+      </div>
+
+      <div class="form__row">
+        <label class="form__label">Pseudo github :</label>
+        <input class="form__field">
+      </div>
+
+      <div class="form__row">
+        <label class="form__label">Url photo :</label>
+        <input class="form__field">
+      </div>
+
+      <div class="form__row">
+        <label class="form__label">Promo :</label>
+        <select class="form__field">
+          <% promos.forEach(promos => { %> 
+            <option> <%= promos.name %> </option>
+          <% });%> 
+        </select>
+      </div>
+
+      <div class="form__row form__row--button">
+        <button type="submit" class="form__button">Ajouter</button>
+      </div>
+    </form>
+  </div>
+  <div class="footer">copyright 2022 - O'clock</div>
+</body>

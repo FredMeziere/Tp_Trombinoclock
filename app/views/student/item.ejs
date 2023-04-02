@@ -1,0 +1,8 @@
+<%- include('../partials/header') %>
+<div class="title">Fiche étudiant</div>
+<div class="student-item">
+  <img class="student-item__image" src="<%= student.profile_picture_url %>">
+  <p class="student-item__name"><%= student.first_name %> <%= student.last_name %></p>
+  <p class="student-item__github"><%= student.github_username %></p>  
+</div>
+<%- include('../partials/footer') %>

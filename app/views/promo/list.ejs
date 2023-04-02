@@ -1,0 +1,23 @@
+<%- include('../partials/header') %>
+<p class="title">Liste des promos</p>
+
+<div class="promos-list">
+<%
+// promos est un tableau.
+// on utilise la structure de contrôle for of pour le parcourir
+// on récupère à chaque tour de boucle un des élément du tableau promos
+// dans la variable promo.
+// promo est un objet (cf. le contenu du fichier promos.json)
+// qui possède 3 propriété : name, id et github_organization
+for (const promo of promos){ 
+%>
+  <div class="promo">
+    <img class="promo__image" src="<%= promo.github_organization %>.png">
+    <p class="promo__name"><%= promo.name %></p>
+    <a class="promo__link" href="/promos/<%= promo.id %>">voir le détail</a>
+  </div>
+<%
+}
+%>
+<%- include('../partials/footer') %>
+</div>

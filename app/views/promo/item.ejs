@@ -1,0 +1,11 @@
+<%- include('../partials/header') %>
+<div class="promo-item">
+  <img class="promo-item__image" src="<%= promo.github_organization%>.png">
+  <p class="promo-item__title"><%= promo.name %></p>
+  <a  class="promo-item__link" href="<%= promo.github_organization %>" target="_blank"><%= promo.github_organization %></a>
+  <a  class="promo-item__link-students" href="/promos/<%= promo.id %>/students">voir la liste des étudiants</a>
+</div>
+
+
+
+<%- include('../partials/footer') %>
